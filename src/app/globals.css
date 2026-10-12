@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @font-face {
+  font-family: "BalloreGrayson";
+  src: url("/img/fonts/BalloreGrayson-GOg0g.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-ballore {
+  font-family: "BalloreGrayson", sans-serif !important;
+} */
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/img/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bold;
+}
+
+.font-montserrat {
+  font-family: "Montserrat-Bold", sans-serif !important;
+}
+
+.light .footer-bg {
+  background-image: url("/img/banner/light.png");
+}
+
+.dark .footer-bg {
+  background-image: url("/img/banner/bg.jpg");
+}
+@layer components {
+  .neo-input {
+    @apply border-[3px] border-[#081a1a] rounded-2xl px-4 py-3 font-bold text-[#081a1a] placeholder:text-gray-400 focus:ring-0 focus:border-blue-600 focus:shadow-[4px_4px_0_0_rgba(8,26,26,1)] outline-none transition-all;
+  }
+}
+
+html,
+body {
+  touch-action: pan-x pan-y;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
